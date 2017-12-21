@@ -1,0 +1,125 @@
+p {
+  color: black;
+}
+
+#homeSection {
+  background: url("/images/apple-iphone-smartphone-desk.jpg") 0 0 no-repeat fixed;
+  background-size: 100%;
+  background-position-y: -18vw;
+  min-height: 40vh;
+  margin: 0 auto;
+  width: 100%;
+  top: 0;
+  max-width: 1920px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#homeSection.mobile {
+  background-size: 150%;
+  background-position-x: 25%;
+}
+
+#Navbar {
+  font-size: 20px;
+  padding-top: 15px;
+  height: 40vh;
+  z-index: 9999;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#Navbar.mobile {
+  font-size: 40px;
+}
+
+#NavList {
+  width: 100%;
+  list-style: none;
+  display: table;
+  float: left;
+  padding: 0;
+}
+
+#NavList li a {
+  color: white;
+  text-decoration: none;
+}
+
+#NavList li hr {
+  margin: 10px -15px 10px;
+  border: 0;
+  border-top: 1px solid #c9c7c7;
+}
+
+#NavList a:hover {
+  color: #a6a2a0;
+  text-decoration: none;
+}
+
+#NavList li {
+  color: white;
+  width: 10%;
+  padding-bottom: 5px;
+  display: table-cell;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#Contact {
+  padding-right: 5%;
+}
+
+#Home {
+  padding-left: 5%;
+}
+
+#logo img {
+  position: absolute;
+  width: 150px;
+  /*the image width*/
+  height: 150px;
+  /*the image height*/
+  left: 50%;
+  top: 50%;
+  margin-left: -80px;
+  /*half the image width*/
+  margin-top: -50px;
+  /*half the image height*/
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
+
+.mobile #logo img {
+  height: 300px;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: -115px;
+}
+
+@media (max-width: 900px) {
+  #homeSection {
+    background-size: 900px;
+    background-position: center;
+    background-position-y: -10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #NavList li {
+    font-size: medium;
+  }
+}
+
+.arrow {
+  display: inline;
+  font-size: 10px;
+}
+
