@@ -1,5 +1,6 @@
 let mix = require('laravel-mix');
 let webpack = require('webpack');
+mix.disableNotifications();
 
 /*
  |--------------------------------------------------------------------------
@@ -22,5 +23,9 @@ mix.webpackConfig({
         })
     ]})
     .js('resources/assets/js/app.js', 'public/js')
+    .js('resources/assets/js/views/main.js', 'public/js/views')
+    .js('resources/assets/js/views/charts.js', 'public/js/views')
+    .js('resources/assets/js/views/widgets.js', 'public/js/views')
     .sass('resources/assets/sass/app.scss', 'public/css')
+    .sass('resources/assets/sass/style.scss', 'public/css')
     .sass('resources/assets/sass/header.scss', 'public/css');

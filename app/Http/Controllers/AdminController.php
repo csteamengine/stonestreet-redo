@@ -25,16 +25,4 @@ class AdminController extends Controller
     {
         return view('admin/index');
     }
-
-    public function projects(){
-        return view('admin/projects');
-    }
-
-    public function jobs(){
-        return view('admin/jobs');
-    }
-
-    public function project(){
-        return view('admin/project');
-    }
 }
