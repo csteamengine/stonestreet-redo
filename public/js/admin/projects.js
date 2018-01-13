@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -10326,162 +10326,51 @@ return jQuery;
 
 /***/ }),
 
-/***/ 10:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {$(function () {
-  'use strict';
+module.exports = __webpack_require__(14);
 
-  var randomScalingFactor = function randomScalingFactor() {
-    return Math.round(Math.random() * 100);
-  };
-  var lineChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgba(220,220,220,0.2)',
-      borderColor: 'rgba(220,220,220,1)',
-      pointBackgroundColor: 'rgba(220,220,220,1)',
-      pointBorderColor: '#fff',
-      data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-    }, {
-      label: 'My Second dataset',
-      backgroundColor: 'rgba(151,187,205,0.2)',
-      borderColor: 'rgba(151,187,205,1)',
-      pointBackgroundColor: 'rgba(151,187,205,1)',
-      pointBorderColor: '#fff',
-      data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-    }]
-  };
-
-  var ctx = document.getElementById('canvas-1');
-  var chart = new Chart(ctx, {
-    type: 'line',
-    data: lineChartData,
-    options: {
-      responsive: true
-    }
-  });
-
-  var randomScalingFactor = function randomScalingFactor() {
-    return Math.round(Math.random() * 100);
-  };
-  var barChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
-      backgroundColor: 'rgba(220,220,220,0.5)',
-      borderColor: 'rgba(220,220,220,0.8)',
-      highlightFill: 'rgba(220,220,220,0.75)',
-      highlightStroke: 'rgba(220,220,220,1)',
-      data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-    }, {
-      backgroundColor: 'rgba(151,187,205,0.5)',
-      borderColor: 'rgba(151,187,205,0.8)',
-      highlightFill: 'rgba(151,187,205,0.75)',
-      highlightStroke: 'rgba(151,187,205,1)',
-      data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
-    }]
-  };
-  var ctx = document.getElementById('canvas-2');
-  var chart = new Chart(ctx, {
-    type: 'bar',
-    data: barChartData,
-    options: {
-      responsive: true
-    }
-  });
-
-  var doughnutData = {
-    labels: ['Red', 'Green', 'Yellow'],
-    datasets: [{
-      data: [300, 50, 100],
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
-    }]
-  };
-  var ctx = document.getElementById('canvas-3');
-  var chart = new Chart(ctx, {
-    type: 'doughnut',
-    data: doughnutData,
-    options: {
-      responsive: true
-    }
-  });
-
-  var radarChartData = {
-    labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
-    datasets: [{
-      label: 'My First dataset',
-      backgroundColor: 'rgba(220,220,220,0.2)',
-      borderColor: 'rgba(220,220,220,1)',
-      pointBackgroundColor: 'rgba(220,220,220,1)',
-      pointBorderColor: '#fff',
-      pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(220,220,220,1)',
-      data: [65, 59, 90, 81, 56, 55, 40]
-    }, {
-      label: 'My Second dataset',
-      backgroundColor: 'rgba(151,187,205,0.2)',
-      borderColor: 'rgba(151,187,205,1)',
-      pointBackgroundColor: 'rgba(151,187,205,1)',
-      pointBorderColor: '#fff',
-      pointHighlightFill: '#fff',
-      pointHighlightStroke: 'rgba(151,187,205,1)',
-      data: [28, 48, 40, 19, 96, 27, 100]
-    }]
-  };
-  var ctx = document.getElementById('canvas-4');
-  var chart = new Chart(ctx, {
-    type: 'radar',
-    data: radarChartData,
-    options: {
-      responsive: true
-    }
-  });
-
-  var pieData = {
-    labels: ['Red', 'Green', 'Yellow'],
-    datasets: [{
-      data: [300, 50, 100],
-      backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-      hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
-    }]
-  };
-  var ctx = document.getElementById('canvas-5');
-  var chart = new Chart(ctx, {
-    type: 'pie',
-    data: pieData,
-    options: {
-      responsive: true
-    }
-  });
-
-  var polarData = {
-    datasets: [{
-      data: [11, 16, 7, 3, 14],
-      backgroundColor: ['#FF6384', '#4BC0C0', '#FFCE56', '#E7E9ED', '#36A2EB'],
-      label: 'My dataset' // for legend
-    }],
-    labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue']
-  };
-  var ctx = document.getElementById('canvas-6');
-  var chart = new Chart(ctx, {
-    type: 'polarArea',
-    data: polarData,
-    options: {
-      responsive: true
-    }
-  });
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 
-/***/ 9:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
+/* WEBPACK VAR INJECTION */(function($) {/* show file value after file select */
+$('.custom-file-input').on('change', function () {
+    $(this).next('.form-control-file').addClass("selected").html($(this).val());
+    if ($(this)[0].files) {
+        var files = $(this)[0].files;
+        for (var i = 0; i < files.length; i++) {
+            console.log(files[i]);
+            var reader = new FileReader();
 
+            reader.onload = function (e) {
+                //alert(e.target.result);
+                var newImg = "" + "<div class='imgdiv'>" + "<img src='" + e.target.result + "' class='imgdivimg' />" + "<i class='fa fa-trash fa-2x' onclick='deleteImage()'></i> " + "" + "</div>";
+
+                $('#imageCard').append(newImg);
+            };
+
+            reader.readAsDataURL($(this)[0].files[i]);
+        }
+    }
+});
+
+function deleteImage() {
+    //TODO remove the parent div of this image, and remove it from the input
+    console.log('removing image');
+}
+
+/* method 2 - change file input to text input after selection
+$('.custom-file-input').on('change',function(){
+    var fileName = $(this).val();
+    $(this).next('.form-control-file').hide();
+    $(this).toggleClass('form-control custom-file-input').attr('type','text').val(fileName);
+})
+*/
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 
