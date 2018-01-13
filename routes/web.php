@@ -22,12 +22,14 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/jobs', 'Admin\JobController@index')->name('adminJobs');
 Route::get('/admin/projects', 'Admin\ProjectController@index')->name('adminProjects');
-Route::get('/admin/job', 'Admin\JobController@job')->name('adminGetJob');
-Route::post('/admin/job', 'Admin\JobController@createjob')->name('adminCreateJob');
-Route::put('/admin/job', 'Admin\JobController@createjob')->name('adminUpdateJob');
-Route::get('/admin/project', 'Admin\ProjectController@project')->name('adminGetProject');
-Route::post('/admin/project', 'Admin\ProjectController@project')->name('adminCreateProject');
-Route::put('/admin/project', 'Admin\ProjectController@project')->name('adminUpdateProject');
+Route::get('/admin/jobs/new', 'Admin\JobController@new')->name('adminAddJob');
+Route::get('/admin/jobs/{id}', 'Admin\JobController@edit')->name('adminGetJob');
+Route::post('/admin/jobs', 'Admin\JobController@create')->name('adminCreateJob');
+Route::put('/admin/jobs', 'Admin\JobController@update')->name('adminUpdateJob');
+Route::get('/admin/projects/new', 'Admin\ProjectController@new')->name('adminAddProject');
+Route::get('/admin/projects/{id}', 'Admin\ProjectController@edit')->name('adminEditProject');
+Route::post('/admin/projects', 'Admin\ProjectController@create')->name('adminCreateProject');
+Route::put('/admin/projects', 'Admin\ProjectController@update')->name('adminUpdateProject');
 
 
 

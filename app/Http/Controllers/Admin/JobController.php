@@ -26,4 +26,22 @@ class JobController extends Controller
     {
         return view('admin.jobs.index');
     }
+
+    public function new(){
+        return view('admin.jobs.job');
+    }
+
+    public function create(Request $product){
+        dump($product);
+        exit;
+    }
+
+    public function edit(){
+        return view('admin.jobs.job');
+    }
+
+    public function update(Request $product){
+        dump($product);
+        exit;
+    }
 }

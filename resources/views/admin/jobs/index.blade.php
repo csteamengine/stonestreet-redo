@@ -16,8 +16,6 @@
 
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
-            <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
             <li class="breadcrumb-item active">Jobs</li>
 
             {{--<!-- Breadcrumb Menu-->--}}
@@ -34,7 +32,7 @@
 
             <h1>Jobs</h1>
         </div>
-        <!-- /.conainer-fluid -->
+        <!-- /.container-fluid -->
     </main>
 
 @endsection

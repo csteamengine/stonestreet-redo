@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -26,4 +27,24 @@ class ProjectController extends Controller
     {
         return view('admin.projects.index');
     }
+
+    public function new(){
+
+        return view('admin.projects.project');
+    }
+
+    public function create(){
+
+    }
+
+    public function edit($id){
+        $project = Project::find($id);
+
+        return view('admin.projects.project', ['project' => $project]);
+    }
+
+    public function update(){
+
+    }
+
 }
