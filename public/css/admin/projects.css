@@ -20,3 +20,13 @@
   white-space: nowrap;
 }
 
+.imgdiv {
+  text-align: center;
+}
+
+.deleteImageIcon {
+  position: absolute;
+  top: 5px;
+  left: 25px;
+}
+

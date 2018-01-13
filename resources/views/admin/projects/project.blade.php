@@ -31,10 +31,11 @@
             @else
                 <form action="{{route('adminCreateProject')}}" method="POST" enctype="multipart/form-data">
             @endif
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <label for="exampleInputEmail1">Project Title</label>
                             <input type="text" name="title" placeholder="Project Title" class="form-control" {{isset($project) ? 'value='.$project->title : ""}} >
                         </div>
                     </div>
@@ -42,23 +43,23 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="text" name="short" placeholder="Project Title" class="form-control" {{isset($project) ? 'value='.$project->short : ""}} >
+                            <label for="exampleInputEmail1">Short Description</label>
+                            <input type="text" name="short" placeholder="Short Description" class="form-control" {{isset($project) ? 'value='.$project->short : ""}} >
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <textarea name="description" style="resize: none" class="form-control">{{isset($project) ? $project->description : ''}}</textarea>
+                            <label for="exampleInputEmail1">Description</label>
+                            <textarea name="description" style="resize: none" placeholder="Description" class="form-control">{{isset($project) ? $project->description : ''}}</textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <label for="exampleInputEmail1">Project Start</label>
                             <input type="date" name="projectstart" placeholder="Project Start" class="form-control" {{isset($project) ? 'value='.$project->projectstart : ""}} >
                         </div>
                     </div>
@@ -66,7 +67,7 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
+                            <label for="exampleInputEmail1">Project End</label>
                             <input type="date" name="projectend" placeholder="Project End" class="form-control" {{isset($project) ? 'value='.$project->projectend : ""}} >
                         </div>
                     </div>
@@ -75,7 +76,7 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <label class="custom-file" id="customFile">
-                            <input type="file" class="custom-file-input" id="images" aria-describedby="fileHelp" multiple>
+                            <input type="file" class="custom-file-input" id="images" name="images[]" aria-describedby="fileHelp" multiple>
                             <span class="custom-file-control form-control-file"></span>
                         </label>
                     </div>
@@ -85,8 +86,7 @@
                     <div class="card-header">
                         Images
                     </div>
-                    <div class="card-body" id="imageCard">
-                        This is some text within a card body.
+                    <div class="card-body row" id="imageCard">
                     </div>
                 </div>
                 <input type="submit" class="btn btn-success" value="{{isset($project) ? "Update Project" : "Create Project"}}">

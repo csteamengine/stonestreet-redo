@@ -1,6 +1,7 @@
 /* show file value after file select */
 $('.custom-file-input').on('change',function(){
     $(this).next('.form-control-file').addClass("selected").html($(this).val());
+    console.log($(this)[0].files);
     if ($(this)[0].files) {
         var files = $(this)[0].files;
         for(var i = 0; i< files.length; i++){
@@ -10,9 +11,9 @@ $('.custom-file-input').on('change',function(){
             reader.onload = function (e) {
                 //alert(e.target.result);
                 var newImg= ""+
-                    "<div class='imgdiv'>" +
-                    "<img src='" + e.target.result +  "' class='imgdivimg' />" +
-                    "<i class='fa fa-trash fa-2x' onclick='deleteImage()'></i> " +
+                    "<div class='imgdiv col-12 col-sm-6 col-md-4'>" +
+                    "<img src='" + e.target.result +  "' class='imgdivimg img-fluid' />" +
+                    "<i class='fa fa-trash fa-2x deleteImageIcon'></i> " +
                     "" +
                     "</div>";
 
@@ -26,10 +27,19 @@ $('.custom-file-input').on('change',function(){
 
 });
 
-function deleteImage(){
-    //TODO remove the parent div of this image, and remove it from the input
-    console.log('removing image');
-}
+$('body').on('click', '.deleteImageIcon', function() {
+    // do something
+    $(this).parent().remove();
+    if ($('.custom-file-input')[0].files) {
+        var files = $('.custom-file-input')[0].files;
+        for(var i = 0; i< files.length; i++) {
+            if($('.custom-file-input')[0].files[i]){
+
+            }
+        }
+
+    }
+});
 
 /* method 2 - change file input to text input after selection
 $('.custom-file-input').on('change',function(){
