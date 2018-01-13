@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class JobController extends Controller
 {
@@ -24,10 +24,6 @@ class JobController extends Controller
      */
     public function index()
     {
-        return view('admin/jobs/index');
-    }
-
-    public function job(){
-        return view('admin/jobs/job');
+        return view('admin.jobs.index');
     }
 }

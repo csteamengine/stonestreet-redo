@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.plain')
 
 @section('cssincludes')
     <link href="/css/monster/css/style.css" rel="stylesheet">

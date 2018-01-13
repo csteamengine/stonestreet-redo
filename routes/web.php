@@ -30,4 +30,6 @@ Route::post('/admin/project', 'Admin\ProjectController@project')->name('adminCre
 Route::put('/admin/project', 'Admin\ProjectController@project')->name('adminUpdateProject');
 
 
+
+
 Route::get('/contact', 'HomeController@contact')->name('contact');
