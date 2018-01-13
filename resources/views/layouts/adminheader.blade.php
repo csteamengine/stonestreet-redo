@@ -19,7 +19,7 @@
     <ul class="nav navbar-nav ml-auto">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <img src="images/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <img src="/images/avatars/charlie.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>

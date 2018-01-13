@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Image;
+use App\Job;
+use App\JobImage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use PHPColorExtractor\PHPColorExtractor;
 
 class JobController extends Controller
 {
@@ -24,24 +28,84 @@ class JobController extends Controller
      */
     public function index()
     {
-        return view('admin.jobs.index');
+        $jobs = Job::all();
+
+        return view('admin.jobs.index', ['jobs' => $jobs]);
     }
 
     public function new(){
         return view('admin.jobs.job');
     }
 
-    public function create(Request $product){
-        dump($product);
+    public function create(Request $job){
+
+        $newJob = new Job();
+        $newJob->title = $job->title;
+        $newJob->short = $job->short;
+        $newJob->description = $job->description;
+        $newJob->fromdate = $job->fromdate;
+        $newJob->todate = $job->todate;
+        $newJob->company = $job->company;
+        $newJob->titledescription = $job->titledescription;
+        $newJob->companydescription = $job->companydescription;
+        $newJob->companyphone = $job->companyphone;
+        $newJob->companywebsite = $job->companywebsite;
+
+        if($job->iscurrent = 'on'){
+            $newJob->iscurrent = true;
+        }else{
+            $newJob->iscurrent = false;
+        }
+        $newJob->save();
+        if($job->hasFile('images'))
+        {
+            foreach($job->file('images') as $file){
+                $newImage = new Image();
+
+                $filepath1 = "projects/".str_replace(' ', '_', $job->title);
+                $filepath = $file->store($filepath1, 'images');
+                $extractor = new PHPColorExtractor();
+
+                $extractor->setImage('images/'.$filepath)->setTotalColors(5)->setGranularity(10);
+                $palette = $extractor->extractPalette();
+//                TODO add new image here
+
+                $newImage->color = $palette[4];
+                $newImage->path = $palette[4];
+                $newImage->filename = $palette[4];
+                $newImage->save();
+
+                $newJobImage = new JobImage();
+                $newJobImage->imageid = $newImage->id;
+                $newJobImage->jobid = $newJob->id;
+                $newJobImage->isactive = true;
+                $newJobImage->save();
+
+            }
+        }
+
+        $image = $newJob->images()->first();
+
+        $newJob->imageid = $image->id;
+        $newJob->save();
+
+        return redirect()->route('adminJobs');
+
         exit;
     }
 
-    public function edit(){
-        return view('admin.jobs.job');
+    public function edit($id){
+        $job = Job::find($id);
+
+        if(!isset($job)){
+            return redirect()->route('adminJobs');
+        }
+
+        return view('admin.jobs.job', ['job' => $job]);
     }
 
-    public function update(Request $product){
-        dump($product);
+    public function update(Request $job){
+        dump($job);
         exit;
     }
 }

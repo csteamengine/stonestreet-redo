@@ -11,6 +11,8 @@
     <title>{{ config('app.name', 'Stonestreet') }}</title>
 
     <!-- Icons -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/simple-line-icons.css" rel="stylesheet">
 

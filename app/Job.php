@@ -2,10 +2,11 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Job extends Authenticatable
+class Job extends Model
 {
     use Notifiable;
 
@@ -15,7 +16,14 @@ class Job extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'employer', 'iscurrent', 'isactive', 'fromdate', 'todate', 'employerphone', 'employeraddress', 'created_at'
+        'title', 'imageid', 'description', 'company', 'titledescription', 'companydescription', 'short', 'iscurrent', 'isactive', 'fromdate', 'todate', 'companyphone', 'companyaddress'
     ];
 
+    public function images(){
+        return $this->hasManyThrough('App\Image', 'App\JobImage', 'jobid', 'id');
+    }
+
+    public function image(){
+        return $this->hasOne('App\Image');
+    }
 }

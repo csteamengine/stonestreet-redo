@@ -39,14 +39,5 @@
 
 @section('jsincludes')
 
-<script src="js/pace.min.js"></script>
-
-<!-- Plugins and scripts required by all views -->
-<script src="js/Chart.min.js"></script>
-
-<!-- Plugins and scripts required by this views -->
-
-<!-- Custom scripts required by this view -->
-<script src="js/views/main.js"></script>
 
 @endsection

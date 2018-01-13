@@ -9191,3 +9191,7 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 
+.custom-icon-link:hover {
+  text-decoration: none;
+}
+

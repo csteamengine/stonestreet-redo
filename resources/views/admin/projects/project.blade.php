@@ -20,22 +20,18 @@
         <!-- Breadcrumb -->
         <ol class="breadcrumb">
             <li class="breadcrumb-item active">Projects</li>
-            <li class="breadcrumb-item active">Add Project</li>
+            <li class="breadcrumb-item active">{{isset($project) ? "Edit Project" : "Add Project"}}</li>
         </ol>
 
         <div class="container-fluid">
 
-            <h1>Add Project</h1>
-            @if(isset($project))
-                <form action="{{route('adminUpdateProject', $project->id)}}" method="PUT" enctype="multipart/form-data">
-            @else
-                <form action="{{route('adminCreateProject')}}" method="POST" enctype="multipart/form-data">
-            @endif
+            <h1>{{isset($project) ? "Edit Project" : "Add Project"}}</h1>
+            <form action="{{ isset($project) ? route('adminUpdateProject', $project->id) : route('adminCreateProject')}}" method={{ isset($project) ? "PUT" : "POST"}} enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Project Title</label>
+                            <label for="title">Project Title</label>
                             <input type="text" name="title" placeholder="Project Title" class="form-control" {{isset($project) ? 'value='.$project->title : ""}} >
                         </div>
                     </div>
@@ -43,7 +39,19 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Short Description</label>
+                            <label for="categoryid">Category</label>
+                            <select name="categoryid" class="form-control">
+                                @foreach($categories as $category)
+                                    <option value="{{$category->id}}" {{isset($project) && $category->id == $project->categoryid ? "selected" : ""}} >{{$category->title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 col-md-6">
+                        <div class="form-group">
+                            <label for="short">Short Description</label>
                             <input type="text" name="short" placeholder="Short Description" class="form-control" {{isset($project) ? 'value='.$project->short : ""}} >
                         </div>
                     </div>
@@ -51,7 +59,7 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Description</label>
+                            <label for="description">Description</label>
                             <textarea name="description" style="resize: none" placeholder="Description" class="form-control">{{isset($project) ? $project->description : ''}}</textarea>
                         </div>
                     </div>
@@ -59,7 +67,7 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Project Start</label>
+                            <label for="projectstart">Project Start</label>
                             <input type="date" name="projectstart" placeholder="Project Start" class="form-control" {{isset($project) ? 'value='.$project->projectstart : ""}} >
                         </div>
                     </div>
@@ -67,12 +75,19 @@
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Project End</label>
+                            <label for="projectend">Project End</label>
                             <input type="date" name="projectend" placeholder="Project End" class="form-control" {{isset($project) ? 'value='.$project->projectend : ""}} >
                         </div>
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-10 col-md-6">
+                        <div class="form-group">
+                            <label for="iscompleted">Completed?</label>
+                            <input type="checkbox" name="iscompleted" class="form-control" {{isset($project) && $project->iscompleted == '1' ? "checked" : ""}} >
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-10 col-md-6">
                         <label class="custom-file" id="customFile">
@@ -91,7 +106,6 @@
                 </div>
                 <input type="submit" class="btn btn-success" value="{{isset($project) ? "Update Project" : "Create Project"}}">
             </form>
-
         </div>
         <!-- /.conainer-fluid -->
     </main>

@@ -15,6 +15,9 @@ class CreateJobimagesTable extends Migration
     {
         Schema::create('jobimages', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('imageid');
+            $table->integer('jobid');
+            $table->boolean('isactive')->default(true);
             $table->timestamps();
         });
     }

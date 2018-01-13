@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Category;
+use App\ProjectImage;
+use App\Image;
+use PHPColorExtractor\PHPColorExtractor;
+
 use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\UploadedFile;
 
 class ProjectController extends Controller
 {
@@ -27,36 +33,81 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('admin.projects.index');
+        $projects = Project::all();
+
+
+        for($i = 0; $i<sizeof($projects); $i++){
+            $projects[$i]->category = $projects[$i]->category()->first();
+        }
+
+        return view('admin.projects.index', ['projects' => $projects]);
     }
 
     public function new(){
+        $categories = Category::all()->where('isactive', '=', '1');
 
-        return view('admin.projects.project');
+        return view('admin.projects.project', ['categories' => $categories]);
     }
 
     public function create(Request $project){
-        dump($project);
+
+        $newProject = new Project();
+        $newProject->title = $project->title;
+        $newProject->short = $project->short;
+        $newProject->description = $project->description;
+        $newProject->projectstart = $project->projectstart;
+        $newProject->projectend = $project->projectend;
+        $newProject->categoryid = $project->categoryid;
+        if($project->iscomleted = 'on'){
+            $newProject->iscompleted = true;
+        }else{
+            $newProject->iscompleted = false;
+        }
+        $newProject->save();
         if($project->hasFile('images'))
         {
-//            dump($project->file('images'));
             foreach($project->file('images') as $file){
-                $filepath = "/images/projects/".$project->title;
-                $filename = $file->store($filepath);
-                if(!is_dir($filepath)){
-                    Storage::makeDirectory($filepath);
-                }
-                $file->move($filepath);
-                dump($filepath);
+                $newImage = new Image();
+
+                $filepath1 = "projects/".str_replace(' ', '_', $project->title);
+                $filepath = $file->store($filepath1, 'images');
+                $extractor = new PHPColorExtractor();
+
+                $extractor->setImage('images/'.$filepath)->setTotalColors(5)->setGranularity(10);
+                $palette = $extractor->extractPalette();
+//                TODO add new image here
+
+                $newImage->color = $palette[4];
+                $newImage->path = $palette[4];
+                $newImage->filename = $palette[4];
+                $newImage->save();
+
+                $newProjectImage = new ProjectImage();
+                $newProjectImage->imageid = $newImage->id;
+                $newProjectImage->projectid = $newProject->id;
+                $newProjectImage->isactive = true;
+                $newProjectImage->save();
+
             }
         }
-        exit;
+
+        $image = $newProject->images()->first();
+
+        $newProject->imageid = $image->id;
+        $newProject->save();
+
+        return redirect()->route('adminProjects');
     }
 
     public function edit($id){
         $project = Project::find($id);
 
-        return view('admin.projects.project', ['project' => $project]);
+        if(!isset($project)){
+            return redirect()->route('adminProjects');
+        }
+
+        $categories = Category::all()->where('isactive', '=', '1');
+        return view('admin.projects.project', ['project' => $project, 'categories' => $categories]);
     }
 
     public function update(){

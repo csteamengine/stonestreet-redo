@@ -19,10 +19,10 @@
                 {{--UI Elements--}}
             {{--</li>--}}
             <li class="nav-item">
-                <a class="nav-link" href="{{route('adminProjects')}}"><i class="icon-speedometer"></i> Projects</a>
+                <a class="nav-link" href="{{route('adminProjects')}}"><i class="icon-folder icons"></i> Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('adminJobs')}}"><i class="icon-speedometer"></i> Jobs</a>
+                <a class="nav-link" href="{{route('adminJobs')}}"><i class="icon-user icons  icons"></i> Jobs</a>
             </li>
             {{--<li class="nav-item nav-dropdown">--}}
                 {{--<a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Components</a>--}}

@@ -7,6 +7,10 @@
  */
 
 ?>
+@section('cssincludes')
+    <link rel="stylesheet" type="text/css" href="/css/DataTables/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/DataTables/datatables.min.css"/>
+@endsection
 @extends('layouts/admin')
 @section('content')
 
@@ -29,8 +33,58 @@
         </ol>
 
         <div class="container-fluid">
-
-            <h1>Projects</h1>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa fa-align-justify"></i>Projects
+                        </div>
+                        <div class="card-body">
+                            <table id="projects" class="display text-center" cellspacing="0" width="100%">
+                                <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Short</th>
+                                    <th>Category</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Short</th>
+                                    <th>Category</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </tfoot>
+                                <tbody>
+                                @foreach($projects as $project)
+                                    <tr>
+                                        <td>{{$project->title}}</td>
+                                        <td>{{$project->short}}</td>
+                                        <td>{{$project->category->title}}</td>
+                                        <td>{{$project->projectstart}}</td>
+                                        <td>{{$project->projectend}}</td>
+                                        <td>
+                                            <a href="{{route('adminEditProject', $project->id)}}" class="custom-icon-link">
+                                                <i class="icon-pencil icons font-2xl"></i>
+                                            </a>
+                                            <a href="{{route('adminEditProject', $project->id)}}" class="custom-icon-link">
+                                            <i class="icons icon-trash font-2xl"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.conainer-fluid -->
     </main>
@@ -39,14 +93,14 @@
 
 @section('jsincludes')
 
-<script src="js/pace.min.js"></script>
 
-<!-- Plugins and scripts required by all views -->
-<script src="js/Chart.min.js"></script>
+<script type="text/javascript" src="/js/DataTables/datatables.min.js"></script>
+<script >
+    $(document).ready(function() {
+        $('#projects').DataTable();
+    } );
+</script>
 
-<!-- Plugins and scripts required by this views -->
 
-<!-- Custom scripts required by this view -->
-<script src="js/views/main.js"></script>
 
 @endsection
