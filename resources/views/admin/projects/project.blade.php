@@ -25,7 +25,7 @@
 
         <div class="container-fluid">
 
-            <h1>{{isset($project) ? "Edit Project" : "Add Project"}}</h1>
+            {{--<h1>{{isset($project) ? "Edit Project" : "Add Project"}}</h1>--}}
             <form action="{{ isset($project) ? route('adminUpdateProject', $project->id) : route('adminCreateProject')}}" method={{ isset($project) ? "PUT" : "POST"}} enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="row">
@@ -60,7 +60,23 @@
                     <div class="col-10 col-md-6">
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea name="description" style="resize: none" placeholder="Description" class="form-control">{{isset($project) ? $project->description : ''}}</textarea>
+                            <textarea name="description" style="resize: none" placeholder="Description" class="form-control" rows="15">{{isset($project) ? $project->description : ''}}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 col-md-6">
+                        <div class="form-group">
+                            <label for="projectwebsite">Project Website</label>
+                            <input type="text" name="projectwebsite" placeholder="Project Website" class="form-control" {{isset($project) ? 'value='.$project->projectwebsite : ""}} >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 col-md-6">
+                        <div class="form-group">
+                            <label for="projectgithub">Project Github</label>
+                            <input type="text" name="projectgithub" placeholder="Project Github" class="form-control" {{isset($project) ? 'value='.$project->projectwebsite : ""}} >
                         </div>
                     </div>
                 </div>

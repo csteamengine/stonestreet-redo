@@ -34,6 +34,16 @@
 
         <div class="container-fluid">
             <div class="row">
+                <div class="col-3">
+                    <h1>Projects</h1>
+                </div>
+                <div class="col-3 ml-auto text-right">
+                    <a href="{{route('adminAddProject')}}" class="btn btn-success">
+                        <i class="icon-plus icons font-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
@@ -73,8 +83,11 @@
                                             <a href="{{route('adminEditProject', $project->id)}}" class="custom-icon-link">
                                                 <i class="icon-pencil icons font-2xl"></i>
                                             </a>
-                                            <a href="{{route('adminEditProject', $project->id)}}" class="custom-icon-link">
-                                            <i class="icons icon-trash font-2xl"></i>
+                                            <a href="{{$project->isactive == 1 ? route('adminDeactivateProject', $project->id) : route('adminActivateProject', $project->id)}}" class=" custom-icon-link">
+                                                <i class="{{$project->isactive == 1 ? 'icon-arrow-up icons text-success' : 'icon-arrow-down icons text-danger'}} font-2xl"></i>
+                                            </a>
+                                            <a href="{{route('adminDeleteProject', $project->id)}}" class="custom-icon-link text-danger">
+                                                <i class="icons icon-trash font-2xl"></i>
                                             </a>
                                         </td>
                                     </tr>

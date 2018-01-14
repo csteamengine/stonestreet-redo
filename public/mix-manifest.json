@@ -8,8 +8,8 @@
     "/js/views/widgets.js": "/js/views/widgets.js",
     "/js/views/main.js": "/js/views/main.js",
     "/js/views/charts.js": "/js/views/charts.js",
-    "/js/admin/projectsIndex.js": "/js/admin/projectsIndex.js",
     "/js/admin/projects.js": "/js/admin/projects.js",
     "/js/admin/jobsIndex.js": "/js/admin/jobsIndex.js",
-    "/js/admin/jobs.js": "/js/admin/jobs.js"
+    "/js/admin/jobs.js": "/js/admin/jobs.js",
+    "/js/admin/projectsIndex.js": "/js/admin/projectsIndex.js"
 }

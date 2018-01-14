@@ -43,6 +43,32 @@ class ProjectController extends Controller
         return view('admin.projects.index', ['projects' => $projects]);
     }
 
+    public function deactivate($id){
+        $project = Project::find($id);
+        $project->isactive = 0;
+        $project->save();
+
+        ProjectImage::where('projectid','=', $id)->update(['isactive' => '0']);
+        return redirect()->route('adminProjects');
+    }
+
+    public function activate($id){
+        $project = Project::find($id);
+        $project->isactive = 1;
+        $project->save();
+
+        ProjectImage::where('projectid','=', $id)->update(['isactive' => '1']);
+        return redirect()->route('adminProjects');
+    }
+
+    public function delete($id){
+        $project = Project::destroy($id);
+
+        ProjectImage::where('projectid','=', $id)->delete();
+
+        return redirect()->route('adminProjects');
+    }
+
     public function new(){
         $categories = Category::all()->where('isactive', '=', '1');
 
@@ -58,6 +84,8 @@ class ProjectController extends Controller
         $newProject->projectstart = $project->projectstart;
         $newProject->projectend = $project->projectend;
         $newProject->categoryid = $project->categoryid;
+        $newProject->projectwebsite = $project->projectwebsite;
+        $newProject->projectgithub = $project->projectgithub;
         if($project->iscomleted = 'on'){
             $newProject->iscompleted = true;
         }else{
@@ -78,8 +106,8 @@ class ProjectController extends Controller
 //                TODO add new image here
 
                 $newImage->color = $palette[4];
-                $newImage->path = $palette[4];
-                $newImage->filename = $palette[4];
+                $newImage->path = 'images/'.$filepath;
+                $newImage->filename = $filepath;
                 $newImage->save();
 
                 $newProjectImage = new ProjectImage();

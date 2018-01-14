@@ -20,6 +20,8 @@ class CreateProjectsTable extends Migration
             $table->text('description')->nullable($value = true);
             $table->integer('imageid')->nullable($value = true);
             $table->integer('categoryid')->nullable($value = true);
+            $table->string('projectwebsite')->nullable($value = true);
+            $table->string('projectgithub')->nullable($value = true);
             $table->date('projectstart');
             $table->date('projectend');
             $table->boolean('iscompleted')->default(0);

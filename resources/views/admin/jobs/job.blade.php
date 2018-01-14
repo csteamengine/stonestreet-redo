@@ -25,7 +25,7 @@
 
         <div class="container-fluid">
 
-            <h1>{{isset($job) ? "Edit Job" : "Add Job"}}</h1>
+            {{--<h1>{{isset($job) ? "Edit Job" : "Add Job"}}</h1>--}}
             <form action="{{ isset($job) ? route('adminUpdateJob', $job->id) : route('adminCreateJob')}}" method="{{ isset($job) ? "PUT" : "POST"}}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <h3>Job Info</h3>
@@ -57,7 +57,7 @@
                     <div class="col-10 col-md-6">
                         <div class="form-group">
                             <label for="description">Job Description</label>
-                            <textarea name="description" style="resize: none" placeholder="Description" class="form-control">{{isset($job) ? $job->description : ''}}</textarea>
+                            <textarea name="description" style="resize: none" placeholder="Description" class="form-control" rows="15">{{isset($job) ? $job->description : ''}}</textarea>
                         </div>
                     </div>
                 </div>

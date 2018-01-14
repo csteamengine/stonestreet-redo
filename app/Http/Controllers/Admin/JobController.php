@@ -33,6 +33,33 @@ class JobController extends Controller
         return view('admin.jobs.index', ['jobs' => $jobs]);
     }
 
+    public function deactivate($id){
+        $job = Job::find($id);
+        $job->isactive = 0;
+        $job->save();
+
+        JobImage::where('jobid','=', $id)->update(['isactive' => '0']);
+        return redirect()->route('adminJobs');
+    }
+
+    public function activate($id){
+        $job = Job::find($id);
+        $job->isactive = 1;
+        $job->save();
+
+        JobImage::where('jobid','=', $id)->update(['isactive' => '1']);
+        return redirect()->route('adminJobs');
+    }
+
+    public function delete($id){
+        $job = Job::destroy($id);
+
+        JobImage::where('jobid','=', $id)->delete();
+
+        return redirect()->route('adminJobs');
+    }
+
+
     public function new(){
         return view('admin.jobs.job');
     }
