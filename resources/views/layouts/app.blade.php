@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Stonestreet') }}</title>
+    <link rel="icon" href="/faviconblack.png?v=2">
 
     <!-- Styles -->
 {{--    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}

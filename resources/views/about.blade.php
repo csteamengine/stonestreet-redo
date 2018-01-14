@@ -137,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-10 ml-auto mr-auto mt-5">
+        <div class="col-10 ml-auto mr-auto mt-5 mb-5">
             <div class="row">
                 <div class="col-12">
                     <div class="row">
@@ -149,7 +149,7 @@
                         @foreach($images as $curr)
                             <div class="col-lg-3 col-md-4 col-sm-4 col-6 m-auto text-center">
                                 <a href="#" class="d-block mb-4 h-100">
-                                    <img class="img-fluid img-thumbnail" src="{{$curr->path}}" alt="">
+                                    <img class="img-fluid" src="{{$curr->path}}" alt="">
                                 </a>
                             </div>
                         @endforeach
