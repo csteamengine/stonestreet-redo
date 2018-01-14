@@ -40,12 +40,12 @@
                     <p class="text-muted mb-0">{{date('m/d/Y', strtotime($job->projectstart))}} - {{$job->iscompleted == 1 ? date('m/d/Y', strtotime($job->projectend)) : "On Going"}}</p>
                 </div>
             </div>
-            <div class="row mt-2">
-                <div class="col-12 text-center">
-                    <a href="#" class="fa fa-globe text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
-                    <a href="#" class="fa fa-github text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
-                </div>
-            </div>
+            {{--<div class="row mt-2">--}}
+                {{--<div class="col-12 text-center">--}}
+                    {{--<a href="#" class="fa fa-globe text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>--}}
+                    {{--<a href="#" class="fa fa-github text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
         </div>
         <div class="col-12 col-md-10 col-xl-10 mb-5 mt-3 mr-auto ml-auto">
             <p class="text-uppercase mb-0 font-weight-bold">Project Description</p>
