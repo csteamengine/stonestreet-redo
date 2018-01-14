@@ -135,6 +135,15 @@
   opacity: 1;
 }
 
+.iconlink{
+  opacity: .8;
+}
+
+.iconlink:hover{
+  text-decoration: none;
+  opacity: 1;
+}
+
 #footertext{
   width: 100%;
   text-align: center;

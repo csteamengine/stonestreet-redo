@@ -19,33 +19,43 @@
             <div class="row mb-5">
                 <div class="col-12">
                     <h1>Let's Talk</h1>
-                    <h6><small class="text-muted">Drop me a line or give me a ring</small></h6>
+                    <h6><small class="text-muted text-uppercase">Drop me a line or check my social media</small></h6>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-5 ml-auto mr-auto">
+                <div class="col-12 col-md-5 m-auto">
                     <div class="card  mb-5">
                         <div class="card-header">
-                            Give Me A Ring
+                            Social Media
                         </div>
                         <div class="card-body text-left">
                             <div class="row">
-                                <div class="col-12">
-                                    <h2>Contact</h2>
+                                <div class="col-12 text-center">
+                                    <h4><small class="text-muted">Email</small></h4>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-12 text-center">
+                                    <h2><small>csteen1005@gmail.com</small></h2>
                                 </div>
                             </div>
                             <div class="row">
-                                {{--TODO add contact info here.--}}
-                                {{--<p>Phone: 5155200549</p>--}}
-                                {{--<p>Email: csteen1005@gmail.com</p>--}}
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h2>Links</h2>
+                                <div class="col-12 text-center">
+                                    <h4><small class="text-muted">Links</small></h4>
                                 </div>
                             </div>
                             <div class="row">
-                                {{--//TODO github, linkedin, facebook, pinterest--}}
+                                <div class="col-12 text-center">
+                                    <a href="https://github.com/csteamengine" target="_blank" class="iconlink text-dark fa fa-github-alt fa-3x m-3">
+
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/charlie-steenhagen-067625101/" target="_blank" class="iconlink  text-dark fa fa-linkedin-square fa-3x m-3">
+
+                                    </a>
+                                    <a href="https://pin.it/26mlblikqrefh4" target="_blank" class="iconlink text-dark fa fa-pinterest fa-3x m-3">
+
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
