@@ -51,8 +51,12 @@
             </div>
             <div class="row mt-2">
                 <div class="col-12 text-center">
-                    <a href="#" class="fa fa-globe text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
-                    <a href="#" class="fa fa-github text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
+                    @if(isset($project->projectwebsite) && $project->projectwebsite != "")
+                        <a href="{{$project->projectwebsite}}" target="_blank" class="fa fa-globe text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
+                    @endif
+                    @if(isset($project->projectgithub) && $project->projectgithub != "")
+                        <a href="{{$project->projectgithub}}" target="_blank" class="fa fa-github text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>
+                    @endif
                 </div>
             </div>
         </div>
