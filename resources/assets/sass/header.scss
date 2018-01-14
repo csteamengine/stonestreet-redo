@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+  font-family: 'Raleway', sans-serif;
+}
+.navbar{
+  background-color: transparent !important;
+  z-index:2;
+  font-size: 1.3em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
 
 p{
   color: black;
@@ -12,8 +25,8 @@ p{
   width: 100%;
   top: 0;
   max-width: 1920px;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 0;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -23,50 +36,15 @@ p{
   background-size: 150%;
   background-position-x: 25%;
 }
-#Navbar {
-  font-size: 20px;
-  padding-top: 15px;
-  height: 40vh;
-  z-index: 9999;
-  border-radius: 0;
-  background-color: rgba(0,0,0,.6);
-  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
-}
-#Navbar.mobile{
-  font-size: 40px;
-}
-#NavList{
+
+.overlay{
+  position: absolute;
   width: 100%;
-  list-style: none;
-  display: table;
-  float: left;
-  padding: 0;
-}
-#NavList li a{
-  color: white;
-  text-decoration: none;
-}
-#NavList li hr{
-  margin: 10px -15px 10px;
-  border: 0;
-  border-top: 1px solid #c9c7c7;
-}
-
-#NavList a:hover{
-  color: #a6a2a0;
-  text-decoration: none;
-}
-
-#NavList li{
-  color: white;
-  width: 10%;
-  padding-bottom: 5px;
-  display: table-cell;
-  text-align: center;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,.6);
 }
 
 #Contact{
@@ -82,19 +60,30 @@ p{
   height: 150px; /*the image height*/
   left: 50%;
   top: 50%;
+  z-index: 3;
   margin-left: -80px; /*half the image width*/
   margin-top: -50px; /*half the image height*/
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
 }
-.mobile #logo img{
-  height: 300px;
-  width: 300px;
-  margin-left: -150px;
-  margin-top: -115px;
 
+@media (max-width: 992px){
+  #logo img{
+    position: absolute;
+    width: 50px; /*the image width*/
+    height: 50px; /*the image height*/
+    left: 25px;
+    top: 15px;
+    z-index: 3;
+    margin: 0;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
 }
+
+
 @media(max-width: 900px){
   #homeSection {
     background-size: 900px;
@@ -102,11 +91,7 @@ p{
     background-position-y: -10px;
   }
 }
-@media (max-width: 600px){
-  #NavList li{
-    font-size: medium;
-  }
-}
+
 .arrow{
   display: inline;
   font-size: 10px;

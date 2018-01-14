@@ -13952,3 +13952,7 @@ hr.transparent {
   border-right-color: #536c79;
 }
 
+.content {
+  margin-top: calc( 40vh + 50px);
+}
+

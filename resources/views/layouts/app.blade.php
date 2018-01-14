@@ -11,6 +11,7 @@
     <title>{{ config('app.name', 'Stonestreet') }}</title>
 
     <!-- Styles -->
+{{--    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     @yield('cssincludes')
@@ -18,12 +19,15 @@
 <body>
     @include('layouts/header')
 
-    <div class="container">
+    <div class="container-fluid content">
         @yield('content')
     </div>
 
     @include('layouts/footer')
     <!-- Scripts -->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('jsincludes')
 </body>
