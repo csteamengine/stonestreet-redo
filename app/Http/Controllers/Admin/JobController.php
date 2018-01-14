@@ -89,7 +89,8 @@ class JobController extends Controller
             foreach($job->file('images') as $file){
                 $newImage = new Image();
 
-                $filepath1 = "projects/".str_replace(' ', '_', $job->title);
+                $filepath1 = "jobs/".str_replace(str_split('\\/:*?"<>|'), '_', $job->title);
+                $filepath1 = "jobs/".str_replace(' ', '_', $filepath1);
                 $filepath = $file->store($filepath1, 'images');
                 $extractor = new PHPColorExtractor();
 

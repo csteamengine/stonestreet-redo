@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-*{
-  font-family: 'Raleway', sans-serif;
-}
+
 .navbar{
   background-color: transparent !important;
   z-index:2;
@@ -10,6 +7,14 @@
   top: 0;
   width: 100%;
   left: 0;
+  .nav-link{
+    color: white !important;
+  }
+}
+.navbar-brand{
+  margin: 0;
+  width: 0;
+  height: 0;
 }
 
 p{
@@ -20,7 +25,7 @@ p{
   -webkit-background-size:100%;
   background-size:100%;
   background-position-y: -18vw;
-  min-height: 40vh;
+  min-height: 45vh;
   margin: 0 auto;
   width: 100%;
   top: 0;
@@ -36,7 +41,76 @@ p{
   background-size: 150%;
   background-position-x: 25%;
 }
+#logo img{
+  position: absolute;
+  width: 150px; /*the image width*/
+  height: 150px; /*the image height*/
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  margin-left: -75px; /*half the image width*/
+  margin-top: -50px; /*half the image height*/
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+}
 
+@media (max-width: 991px){
+  #logo img{
+    position: absolute;
+    width: 50px; /*the image width*/
+    height: 50px; /*the image height*/
+    left: 25px;
+    top: 15px;
+    z-index: 3;
+    margin: 0;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+}
+
+
+@media(max-width: 991px){
+  #homeSection {
+    background-size: 991px;
+    background-position: center;
+    background-position-y: -10px;
+  }
+}
+
+#homeSection.home{
+  height: 100vh;
+  background-size:cover;
+  background-position-y: 0;
+  #logo img{
+    position: absolute;
+    width: 150px; /*the image width*/
+    height: 150px; /*the image height*/
+    left: 50%;
+    top: 30%;
+    z-index: 3;
+    margin-left: -80px; /*half the image width*/
+    margin-top: -50px; /*half the image height*/
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+  @media (max-width: 991px){
+    #logo img{
+      position: absolute;
+      width: 50px; /*the image width*/
+      height: 50px; /*the image height*/
+      left: 25px;
+      top: 15px;
+      z-index: 3;
+      margin: 0;
+      -ms-transform: rotate(45deg); /* IE 9 */
+      -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+      transform: rotate(45deg);
+    }
+  }
+}
 .overlay{
   position: absolute;
   width: 100%;
@@ -54,43 +128,7 @@ p{
   padding-left: 5%;
 }
 
-#logo img{
-  position: absolute;
-  width: 150px; /*the image width*/
-  height: 150px; /*the image height*/
-  left: 50%;
-  top: 50%;
-  z-index: 3;
-  margin-left: -80px; /*half the image width*/
-  margin-top: -50px; /*half the image height*/
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-}
 
-@media (max-width: 992px){
-  #logo img{
-    position: absolute;
-    width: 50px; /*the image width*/
-    height: 50px; /*the image height*/
-    left: 25px;
-    top: 15px;
-    z-index: 3;
-    margin: 0;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-    transform: rotate(45deg);
-  }
-}
-
-
-@media(max-width: 900px){
-  #homeSection {
-    background-size: 900px;
-    background-position: center;
-    background-position-y: -10px;
-  }
-}
 
 .arrow{
   display: inline;

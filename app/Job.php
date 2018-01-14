@@ -20,10 +20,10 @@ class Job extends Model
     ];
 
     public function images(){
-        return $this->hasManyThrough('App\Image', 'App\JobImage', 'jobid', 'id');
+        return $this->belongsToMany('App\Image', 'jobimages', 'jobid', 'imageid');
     }
 
     public function image(){
-        return $this->hasOne('App\Image');
+        return $this->hasOne('App\Image', 'id', 'imageid');
     }
 }

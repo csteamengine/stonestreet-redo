@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+use Illuminate\Http\Request;
 
 Auth::routes();
 
@@ -39,5 +37,23 @@ Route::get('/admin/jobs/{id}/deactivate', 'Admin\JobController@deactivate')->nam
 
 
 
-
+Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
+Route::get('/jobs', 'HomeController@jobs')->name('jobs');
+Route::get('/project/{id}', 'HomeController@project')->name('project');
+Route::get('/job/{id}', 'HomeController@job')->name('job');
+Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::post('/contact', 'HomeController@sendEmail')->name('sendEmail');
+Route::get('/', function () {
+    return view('index');
+})->name('home');
+
+//This route is to preview the email template
+//Route::get('/mailable', function () {
+//    $invoice = new Request();
+//    $invoice->name = "Charlie Steenhagen";
+//    $invoice->email = "csteen1005@gmail.com";
+//    $invoice->phone = "515-520-0549";
+//    $invoice->message = "Hello, this is another test in the browser";
+//    return new App\Mail\ContactEmail($invoice);
+//});

@@ -34,4 +34,5 @@ mix.webpackConfig({
     .sass('resources/assets/sass/admin/projects.scss', 'public/css/admin')
     .sass('resources/assets/sass/admin/jobs.scss', 'public/css/admin')
     .sass('resources/assets/sass/style.scss', 'public/css')
-    .sass('resources/assets/sass/header.scss', 'public/css');
+    .sass('resources/assets/sass/header.scss', 'public/css')
+    .sass('resources/assets/sass/about.scss', 'public/css');

@@ -13,22 +13,25 @@
     </button>
     <div class="navbar-collapse collapse" id="navbar10">
         <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+            <li class="nav-item text-center">
+                <a class="nav-link" href="{{route('home')}}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
+            </li>
+            <li class="nav-item text-center">
+                <a class="nav-link" href="{{route('jobs')}}">Jobs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="{{route('about')}}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{{route('contact')}}">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
-<div id="homeSection">
+<div id="homeSection" class="{{Request::is('/') ? "home" : ""}}">
     <div class="overlay"></div>
     <div id="logo">
         <img src="/images/OneSLogo.png">

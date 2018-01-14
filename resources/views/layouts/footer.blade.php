@@ -6,4 +6,4 @@
  * Time: 12:41 AM
  */
 ?>
-<h1>Footer</h1>
+<p id="footertext">Developed and Designed by Charlie Steenhagen</p>
