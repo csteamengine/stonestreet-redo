@@ -6,7 +6,7 @@
 
 @section('content')
     <a href="{{route('portfolio')}}" id="enterbutton">
-        Check Out My Work
+        View My Work
     </a>
 @endsection
 

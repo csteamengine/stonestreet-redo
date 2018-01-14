@@ -12,6 +12,8 @@
 
     <!-- Styles -->
 {{--    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/simple-line-icons.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     @yield('cssincludes')

@@ -17,40 +17,137 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center mb-2">
+            <h2 class="text-uppercase ">Charlie Steenhagen</h2>
+            <p class="text-muted">Full-Stack Web Developer/Software Engineer</p>
+        </div>
+        <div class="col-10 m-auto">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 m-auto text-center">
-                    <img src="{{$image->path}}" class="img-fluid img-thumbnail">
+                <div class="col-12 mb-4 col-sm-8 col-md-4 col-xl-4 ml-auto mr-auto  mt-sm-5 mb-sm-5 mt-md-0">
+                    <img src="{{$image->path}}" style="width: 100%;" class="img-fluid">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-md-6 m-auto text-center">
+                <div class="col-12 col-md-8 col-xl-4 ">
+                    <p class="text-uppercase font-weight-bold">Professional Profile</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere orci nec mi malesuada, porttitor finibus nisi posuere. Pellentesque vel metus faucibus metus placerat tincidunt. Sed vel hendrerit nulla, nec vestibulum justo. Praesent a magna lorem. Nullam eu augue interdum, congue diam sed, pellentesque felis. Sed sollicitudin lorem eu efficitur eleifend. Quisque vehicula rutrum lacus, ut imperdiet urna pellentesque ac. Phasellus condimentum scelerisque orci ac elementum. Vestibulum quis velit tristique, convallis orci ut, mattis est. Integer non tristique neque, ut semper nulla. Aliquam scelerisque finibus fringilla. Aenean pharetra consequat ipsum vitae blandit.
+                    </p>
+                </div>
+                <div class="col-12 col-md-12 col-xl-4 col-xl-4 mb-5">
+                    <p class="text-uppercase font-weight-bold">My Skills</p>
                     <div class="row">
-                        <div class="col-12">
-                            <h2>A Little About Me</h2>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 90%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>PHP</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">90%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 80%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>Java</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">80%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 85%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>ColdFusion</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">85%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 85%;">
+                                    <div class="row progress-text">
+                                        <div class="col-8">
+                                            <p class="progress-skill"><small>Database&nbsp;Management</small></p>
+                                        </div>
+                                        <div class="col-4 text-right ml-auto">
+                                            <p class="progress-percent">85%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 75%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>Front&nbsp;End&nbsp;Languages</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">75%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 70%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>Git&nbsp;&&nbsp;Version&nbsp;Control</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">70%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="progress-custom">
+                                <div class="progress-bar-custom" style="width: 50%;">
+                                    <div class="row progress-text">
+                                        <div class="col-6">
+                                            <p class="progress-skill"><small>Design&nbsp;Patterns</small></p>
+                                        </div>
+                                        <div class="col-6 text-right ml-auto">
+                                            <p class="progress-percent">50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p>
-                                My name is Charlie Steenhagen and I am a Software Engineer from Ames, Iowa. I graduated from Iowa State University in 2017, and have been working
-                                as an engineer ever since.
-                            </p>
-                        </div>
-                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-10 ml-auto mr-auto mt-5">
             <div class="row">
-
-                <div class="col-12 m-auto">
+                <div class="col-12">
                     <div class="row">
-                        <div class="col-12 text-center">
+                        <div class="col-12 text-center mb-3">
                             <h2>A Look Into My Life</h2>
                         </div>
                     </div>
                     <div class="row">
                         @foreach($images as $curr)
-                            <div class="col-lg-3 col-md-4 col-xs-6 m-auto text-center">
+                            <div class="col-lg-3 col-md-4 col-sm-4 col-6 m-auto text-center">
                                 <a href="#" class="d-block mb-4 h-100">
                                     <img class="img-fluid img-thumbnail" src="{{$curr->path}}" alt="">
                                 </a>

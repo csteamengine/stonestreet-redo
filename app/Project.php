@@ -20,7 +20,7 @@ class Project extends Model
     ];
 
     public function images(){
-        return $this->belongsToMany('App\Image', 'projectimages', 'projectsid', 'imageid');
+        return $this->belongsToMany('App\Image', 'projectimages', 'projectid', 'imageid');
     }
 
     public function image(){
