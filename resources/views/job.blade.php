@@ -37,7 +37,7 @@
                 <div class="col-12 text-center mt-5">
                     <h1 class="mb-0" ><small>{{$job->title}}</small></h1>
                     <p class="text-muted mb-0">{{$job->short}}</p>
-                    <p class="text-muted mb-0">{{date('m/d/Y', strtotime($job->projectstart))}} - {{$job->iscompleted == 1 ? date('m/d/Y', strtotime($job->projectend)) : "On Going"}}</p>
+                    <p class="text-muted mb-0">{{date('m/d/Y', strtotime($job->todate))}} - {{date('m/d/Y', strtotime($job->fromdate))}}</p>
                 </div>
             </div>
             {{--<div class="row mt-2">--}}
