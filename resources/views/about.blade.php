@@ -29,7 +29,12 @@
                 <div class="col-12 col-md-8 col-xl-4 ">
                     <p class="text-uppercase font-weight-bold">Professional Profile</p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere orci nec mi malesuada, porttitor finibus nisi posuere. Pellentesque vel metus faucibus metus placerat tincidunt. Sed vel hendrerit nulla, nec vestibulum justo. Praesent a magna lorem. Nullam eu augue interdum, congue diam sed, pellentesque felis. Sed sollicitudin lorem eu efficitur eleifend. Quisque vehicula rutrum lacus, ut imperdiet urna pellentesque ac. Phasellus condimentum scelerisque orci ac elementum. Vestibulum quis velit tristique, convallis orci ut, mattis est. Integer non tristique neque, ut semper nulla. Aliquam scelerisque finibus fringilla. Aenean pharetra consequat ipsum vitae blandit.
+                        I am a software engineer from Iowa State, with several years of experience in web development.
+                        My journey as a software engineering started in mechanical engineering, where I soon found my true passion was working with computers.
+                        After switching to Software, a friend and I started the Web Development club, where we had regular meetings to
+                        help new web developers pick up the craft. Soon after, I earned a position as a developer for the Iowa State Admissions System's team where I developed PHP applications to assist the
+                        staff. This position helped me to earn a position with Saltech Systems here in Ames where I currently work. In my free time I enjoy tinkering with electronics, as well as staying active by running and
+                        participating in triathlons.
                     </p>
                 </div>
                 <div class="col-12 col-md-12 col-xl-4 col-xl-4 mb-5">

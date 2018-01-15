@@ -35,17 +35,22 @@
         <div class="col-12 col-md-6 col-lg-4 mr-xl-auto ml-xl-0 m-auto">
             <div class="row mb-0">
                 <div class="col-12 text-center mt-5">
-                    <h1 class="mb-0" ><small>{{$job->title}}</small></h1>
+                    <h2 class="mb-0" ><small>{{$job->title}}</small></h2>
                     <p class="text-muted mb-0">{{$job->short}}</p>
-                    <p class="text-muted mb-0">{{date('m/d/Y', strtotime($job->fromdate))}} - {{date('m/d/Y', strtotime($job->todate))}}</p>
                 </div>
             </div>
-            {{--<div class="row mt-2">--}}
-                {{--<div class="col-12 text-center">--}}
-                    {{--<a href="#" class="fa fa-globe text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>--}}
-                    {{--<a href="#" class="fa fa-github text-muted fa-2x ml-3 mr-3 mt-0 project-links"></a>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="row mt-2">
+                <div class="col-12 text-center">
+                    <h3 class="mt-3 mb-0"><small>Dates</small></h3>
+                    <p class="text-muted mb-0">{{date('m/d/Y', strtotime($job->fromdate))}} - {{$job->iscurrent == "1" ? "Current" : date('m/d/Y', strtotime($job->todate))}}</p>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12 text-center">
+                    <h3 class="mt-3 mb-0"><small>Company</small></h3>
+                    <p class="text-muted mb-0">{{$job->company}}</p>
+                </div>
+            </div>
         </div>
         <div class="col-12 col-md-10 col-xl-10 mb-5 mt-3 mr-auto ml-auto">
             <p class="text-uppercase mb-0 font-weight-bold">Project Description</p>
