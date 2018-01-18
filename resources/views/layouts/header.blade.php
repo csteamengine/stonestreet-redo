@@ -34,6 +34,6 @@
 <div id="homeSection" class="{{Request::is('/') ? "home" : ""}}">
     <div class="overlay"></div>
     <div id="logo">
-        <img src="/images/OneSLogo.png">
+        <img src="/images/OneSLogoOrange.png">
     </div>
 </div>

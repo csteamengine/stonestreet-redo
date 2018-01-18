@@ -1,11 +1,16 @@
 // Here you can add other styles
+@import "variables";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:300,400');
 *{
   //font-family: 'Raleway', sans-serif;
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   line-height: 1.4;
+  color: $main-font-color;
   //text-transform: uppercase;
+}
+body{
+  background-color: $main-background-color;
 }
 .content{
   margin-top: calc( 45vh + 50px);
@@ -48,9 +53,9 @@
 }
 
 #enterbutton{
-  color: white;
+  color:  $main-font-color;
   text-decoration: none;
-  border: 1px solid white;
+  border: 1px solid  $main-font-color;
   position: fixed;
   z-index: 50;
   top: 50%;

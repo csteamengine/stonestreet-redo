@@ -4204,7 +4204,7 @@ tbody.collapse.show {
 .navbar-dark .navbar-nav .nav-link,
 .navbar-dark .navbar-nav .navbar .dropdown-toggle,
 .navbar .navbar-dark .navbar-nav .dropdown-toggle {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -4241,16 +4241,16 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: white;
 }
 
 .card {
@@ -13956,6 +13956,11 @@ hr.transparent {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   line-height: 1.4;
+  color: #f3972b;
+}
+
+body {
+  background-color: #333334;
 }
 
 .content {
@@ -13998,9 +14003,9 @@ hr.transparent {
 }
 
 #enterbutton {
-  color: white;
+  color: #f3972b;
   text-decoration: none;
-  border: 1px solid white;
+  border: 1px solid #f3972b;
   position: fixed;
   z-index: 50;
   top: 50%;
