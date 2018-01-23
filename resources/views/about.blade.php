@@ -30,7 +30,7 @@
                     <p class="text-uppercase font-weight-bold">Professional Profile</p>
                     <p>
                         I am a software engineer from Iowa State, with several years of experience in web development.
-                        My journey as a software engineering started in mechanical engineering, where I soon found my true passion was working with computers.
+                        My journey as a software engineer started in mechanical engineering, where I soon found my true passion was working with computers.
                         After switching to Software, a friend and I started the Web Development club, where we had regular meetings to
                         help new web developers pick up the craft. Soon after, I earned a position as a developer for the Iowa State Admissions System's team where I developed PHP applications to assist the
                         staff. This position helped me to earn a position with Saltech Systems here in Ames where I currently work. In my free time I enjoy tinkering with electronics, as well as staying active by running and
