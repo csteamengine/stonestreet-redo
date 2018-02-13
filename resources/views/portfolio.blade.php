@@ -38,7 +38,7 @@
                 <div class="row text-center project-grid">
                     @foreach($websites as $website)
                         <a href="{{route('project', $website->id)}}"  class="project">
-                            <div class="project-image" style="background-image: url('{{$website->image->path}}')" >
+                            <div class="project-image" style="background-image: url('{{isset($website->image) ? $website->image->path : ''}}')" >
                                 <div class="overlay"></div>
                             </div>
                             <div class="project-title">

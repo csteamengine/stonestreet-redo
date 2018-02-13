@@ -80,7 +80,7 @@ class ProjectController extends Controller
         $newProject = new Project();
         $newProject->title = $project->title;
         $newProject->short = $project->short;
-        $newProject->description = $project->description;
+        $newProject->description = nl2br($project->description);
         $newProject->projectstart = $project->projectstart;
         $newProject->projectend = $project->projectend;
         $newProject->categoryid = $project->categoryid;
@@ -121,7 +121,10 @@ class ProjectController extends Controller
 
         $image = $newProject->images()->first();
 
-        $newProject->imageid = $image->id;
+	if(isset($image)){
+		$newProject->imageid = $image->id;
+	}
+
         $newProject->save();
 
         return redirect()->route('adminProjects');

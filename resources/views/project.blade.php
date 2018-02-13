@@ -62,7 +62,7 @@
         </div>
         <div class="col-12 col-md-10 col-xl-10 mb-5 mt-3 mr-auto ml-auto">
             <p class="text-uppercase mb-0 font-weight-bold">Project Description</p>
-            <p><small>{{$project->description}}</small></p>
+            <p><small>{!!$project->description!!}</small></p>
         </div>
 
     </div>
