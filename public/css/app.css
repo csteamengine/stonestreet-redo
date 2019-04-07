@@ -5,6 +5,14 @@
   color: #f3972b;
 }
 
+html {
+  background-color: #333334;
+}
+
+.container-fluid {
+  background-color: #333334;
+}
+
 body {
   background-color: #333334;
 }
@@ -75,12 +83,12 @@ body {
   position: absolute;
   bottom: -30px;
   text-decoration: none;
-  color: black;
+  color: #f3972b;
 }
 
 .nav-link {
   background-color: transparent !important;
-  color: black !important;
+  color: #f3972b !important;
 }
 
 .nav-link.active {

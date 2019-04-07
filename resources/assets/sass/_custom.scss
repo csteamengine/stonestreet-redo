@@ -1,6 +1,7 @@
 // Here you can add other styles
-@import "variables";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:300,400');
+@import "variables";
+
 *{
   //font-family: 'Raleway', sans-serif;
   font-family: 'Montserrat', sans-serif;
@@ -8,6 +9,14 @@
   line-height: 1.4;
   color: $main-font-color;
   //text-transform: uppercase;
+}
+html{
+	background-color: $main-background-color;
+
+	
+}
+.container-fluid{
+	background-color: $main-background-color;
 }
 body{
   background-color: $main-background-color;
@@ -79,12 +88,12 @@ body{
   position: absolute;
   bottom: -30px;
   text-decoration: none;
-  color: black;
+  color: $main-font-color;
 }
 
 .nav-link{
   background-color: transparent !important;
-  color: black !important;
+  color: $main-font-color !important;
 }
 
 .nav-link.active{

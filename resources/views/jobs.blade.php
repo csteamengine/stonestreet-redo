@@ -18,7 +18,7 @@
         @foreach($jobs as $job)
             <a href="{{route('job', $job->id)}}"  class="project">
                 <div class="project-image" style="background-image: url('{{$job->image->path}}')" >
-                    <div class="overlay"></div>
+                    <!-- <div class="overlay"></div> -->
                 </div>
                 <div class="project-title">
                     {{$job->title}}

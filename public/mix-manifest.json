@@ -4,7 +4,6 @@
     "/css/admin/projects.css": "/css/admin/projects.css",
     "/css/admin/jobs.css": "/css/admin/jobs.css",
     "/css/style.css": "/css/style.css",
-    "/css/header.css": "/css/header.css",
     "/css/about.css": "/css/about.css",
     "/js/views/widgets.js": "/js/views/widgets.js",
     "/js/views/main.js": "/js/views/main.js",
@@ -12,5 +11,6 @@
     "/js/admin/projects.js": "/js/admin/projects.js",
     "/js/admin/jobsIndex.js": "/js/admin/jobsIndex.js",
     "/js/admin/jobs.js": "/js/admin/jobs.js",
-    "/js/admin/projectsIndex.js": "/js/admin/projectsIndex.js"
+    "/js/admin/projectsIndex.js": "/js/admin/projectsIndex.js",
+    "/css/header.css": "/css/header.css"
 }

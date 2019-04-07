@@ -39,7 +39,7 @@
                     @foreach($websites as $website)
                         <a href="{{route('project', $website->id)}}"  class="project">
                             <div class="project-image" style="background-image: url('{{$website->image->path}}')" >
-                                <div class="overlay"></div>
+                                <!-- <div class="overlay"></div> -->
                             </div>
                             <div class="project-title">
                                 {{$website->title}}
@@ -53,7 +53,7 @@
                     @foreach($software as $proj)
                         <a href="{{route('project', $proj->id)}}"  class="project">
                             <div class="project-image" style="background-image: url('{{$proj->image->path}}')" >
-                                <div class="overlay"></div>
+                                <!-- <div class="overlay"></div> -->
                             </div>
                             <div class="project-title">
                                 {{$proj->title}}
@@ -67,7 +67,7 @@
                     @foreach($hardware as $hard)
                         <a href="{{route('project', $hard->id)}}"  class="project">
                             <div class="project-image" style="background-image: url('{{$hard->image->path}}')" >
-                                <div class="overlay"></div>
+                                <!-- <div class="overlay"></div> -->
                             </div>
                             <div class="project-title">
                                 {{$hard->title}}
